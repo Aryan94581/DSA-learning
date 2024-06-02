@@ -1,0 +1,133 @@
+Middle function
+public class Exercise {
+    public static int[] middle(int[] array) {
+        // TODO
+        if (array.length <= 2) {
+            return new int[0]; 
+        }
+        int middlearray[]= new int[array.length-2];
+        for(int i = 1;i<array.length-1;i++){
+            middlearray[i-1]= array[i];
+        }
+    return middlearray;
+    }
+
+}
+2d diagonals
+public class Exercise {
+      public static int sumDiagonalElements(int[][] array) {
+        int total=0;
+        for(int i=0;i<array.length;i++){
+            
+            total +=array[i][i];
+        }
+        return total;
+    }
+}
+best score array
+
+public class Exercise {
+    public static int[] findTopTwoScores(int[] array){
+        // TODO
+        int[] topTwoScorror = new int[2];
+        topTwoScorror[0] = 0;
+        topTwoScorror[1] = 0;
+        for(int value : array){
+            if(value > topTwoScorror[0]){
+                topTwoScorror[1]=topTwoScorror[0];
+                topTwoScorror[0]=value;
+            }
+        }
+        return topTwoScorror;
+    }
+}
+
+best time to buy leetcode 121
+public class Exercise {
+    public int maxProfit(int[] prices) {
+        // TODO
+        if(prices.length ==0){
+            return 0;
+        }
+        int dayofbuy=0;
+        int dayofsell=0;
+        int i;
+        int j;
+        int length = prices.length;
+        for (i =length-2; i>0; i-- )
+        if(prices[i] < prices[i+1]){
+            dayofbuy= prices[i];
+        }
+        for(j=i+1;j<length;j++)
+        if(prices[j] > prices[j-1]){
+            dayofsell = prices[j];
+        }
+        int maxProfit = dayofsell-dayofbuy; 
+        return maxProfit;
+    }
+}
+
+two sum leetcode 1
+public class Exercise {
+    public int[] twoSum(int[] nums, int target) {
+    // TODO
+        int[] twoSumIndex= new int[2];
+        int index=0;
+        for (int i=0;i<nums.length ;i++ ){
+            for(int j=i+1;j<nums.length;j++){
+                if ( target == nums[i]+nums[j]){
+                    twoSumIndex[index] = i;
+                    twoSumIndex[index+1] = j;
+                    break;
+                }
+            }
+        }
+        return twoSumIndex;
+    }
+
+}
+isunique/contain dublicate
+public class Exercise {
+    public boolean isUnique(int[] intArray) {
+        // TODO
+    boolean uniqueOrNot = false;
+    for(int i=1;i<intArray.length;i++){
+        if(intArray[i] != intArray[i-1]){
+            uniqueOrNot = true;
+        }else{
+            uniqueOrNot = false;
+        }
+    }
+    return uniqueOrNot;
+    }
+}
+permutation
+public class Exercise {
+    public boolean permutation(int[] array1, int[] array2){
+        // TODO
+        if(array1.length != array2.length){
+            return false;
+        }
+        int length = array1.length;
+        boolean check = true;
+        int Array1Add =0;
+        int Array2Add =0;
+        int Array1Mull =0;
+        int Array2Mull =0;
+        if(array1.length != array2.length){
+            check = false;
+        }
+        for(int i=0;i<length;i++){
+            Array1Add += array1[i];
+            Array1Mull= Array1Mull * array1[i];
+            Array2Add += array2[i];   
+            Array2Mull= Array2Mull * array2[i];
+            
+        }
+        if(Array1Add == Array2Add && Array1Mull == Array2Mull ){
+            check = true;
+        }
+        return check;
+    }
+
+}
