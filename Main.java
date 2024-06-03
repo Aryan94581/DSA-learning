@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        // doubble linkedlist
-        DLL list = new DLL();
+        // TODO: doubble linkedlist
+            DLL list = new DLL();
         list. insertFirst(13);
         list. insertFirst(12);
         list. insertFirst(18);
@@ -11,8 +11,6 @@ public class Main {
         System.out.println();
         list.insert(12, 88);
         list.display();
-        
-        // hello
         // for single linkedList 
         // LL list = new LL();
         // list.insertFirst(15);

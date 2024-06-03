@@ -2,40 +2,41 @@ public class LL {
     private Node head;
     private Node tail;
     private int size;
-    
+
     public LL() {
         this.size = 0;
     }
+
     // insertion of element
-    public void insertFirst(int val){
+    public void insertFirst(int val) {
         Node node = new Node(val);
         node.next = head;
         head = node;
-        if(tail == null){
+        if (tail == null) {
             tail = head;
         }
         size++;
     }
 
-    public void insertLast(int val){
-        if(tail == null){
+    public void insertLast(int val) {
+        if (tail == null) {
             insertFirst(val);
             return;
         }
         Node node = new Node(val);
         tail.next = node;
         tail = node;
-        
+
         size++;
     }
     // commit
 
-    public void insert(int val, int index){
-        if(index == 0){
+    public void insert(int val, int index) {
+        if (index == 0) {
             insertFirst(val);
             return;
         }
-        if(index == size){
+        if (index == size) {
             insertLast(val);
             return;
         }
@@ -48,35 +49,35 @@ public class LL {
         size++;
 
     }
-    // insertion finished
-    // deletion 
-    public int deleteFirst(){
-        int val =head.value;
+
+    // deletion
+    public int deleteFirst() {
+        int val = head.value;
         head = head.next;
-        if(head == null){
-             tail = null;
+        if (head == null) {
+            tail = null;
         }
-        size --;
-        return  val;
+        size--;
+        return val;
     }
     // delete last
 
-    public int deleteLast(){
-        if(size <=1){
+    public int deleteLast() {
+        if (size <= 1) {
             return deleteFirst();
         }
-        Node secondLast = get(size-2);
+        Node secondLast = get(size - 2);
         int val = tail.value;
         tail = secondLast;
         tail.next = null;
         return val;
     }
-    
-    public int delete(int index){
-        if (index == 0){
+
+    public int delete(int index) {
+        if (index == 0) {
             return deleteFirst();
         }
-        if(index == size-1){
+        if (index == size - 1) {
             return deleteLast();
         }
         Node prev = get(index - 1);
@@ -86,42 +87,45 @@ public class LL {
 
         return val;
     }
+
     // find the node with value
-    public Node find(int value){
+    public Node find(int value) {
         Node node = head;
-        while(node != null){
-             if(node.value == value){
+        while (node != null) {
+            if (node.value == value) {
                 return node;
             }
             node = node.next;
         }
         return node;
     }
-    // get the index 
-    public Node get(int index){
+
+    // get the index
+    public Node get(int index) {
         Node node = head;
         for (int i = 0; i < index; i++) {
-        node = node.next;            
+            node = node.next;
         }
         return null;
     }
 
-    public void display(){
+    public void display() {
         Node temp = head;
-        while(temp != null){
-            System.out.print(temp.value +" -> ");
+        while (temp != null) {
+            System.out.print(temp.value + " -> ");
             temp = temp.next;
         }
         System.out.println("END");
     }
 
-    private class Node{
+    private class Node {
         private int value;
         private Node next;
 
         public Node(int value) {
             this.value = value;
         }
+
         public Node(int value, LL.Node next) {
             this.value = value;
             this.next = next;
