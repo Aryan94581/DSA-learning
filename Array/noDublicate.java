@@ -3,7 +3,6 @@ import java.util.Arrays;
 
 public class noDublicate {
     public static int[] removeDuplicates(int[] arr) {
-        // TODO
         int[] A = new int[arr.length];
         int index = 0;
         for (int B : arr) {

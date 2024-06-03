@@ -13,5 +13,6 @@ public class AddingValueInArray {
         int[] Xyz = { 1, 1, 2, 2, 3, 4, 5 };
         noDublicate nD = new noDublicate();
         nD.removeDuplicates(Xyz);
+    
     }
 }

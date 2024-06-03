@@ -1,7 +1,6 @@
 package Array;
 public class noDublicateSortedArray {
     public int removeDuplicates(int[] nums) {
-        // TODO
         if (nums.length < 1) {
             return 0;
         }
