@@ -14,21 +14,21 @@ public class CSLL {
             tail = node;
             return;
         }
-        tail.next = head;
+        tail.next = node;
         node.next = head;
         head = node;
-        return;
     }
 
     public void display() {
-        if (head == null) {
-        }
         Node temp = head;
-        while (temp != head) {
-            System.out.println(temp + " -> ");
-            temp = temp.next;
-        }
+        if (head != null) {
 
+            do {
+                System.out.print(temp.value + " -> ");
+                temp = temp.next;
+            } while (temp != head);
+        }
+        System.out.println();
     }
 
     private class Node {
