@@ -1,17 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        // TODO: doubble linkedlist
-        DLL list = new DLL();
-        list.insertFirst(13);
-        list.insertFirst(15);
-        list.insertFirst(17);
-        list.insertFirst(19);
-        list.insertFirst(11);
-        list.insertLast(99);
-        list.insert(17, 88);
-        System.out.println(list.find(17));
 
+        CSLL list = new CSLL();
+        list.insert(5);
+        list.insert(6);
+        list.insert(8);
+        list.insert(3);
         list.display();
+
+        // TODO: doubble linkedlist
+        // DLL list = new DLL();
+        // list.insertFirst(13);
+        // list.insertFirst(15);
+        // list.insertFirst(17);
+        // list.insertFirst(19);
+        // list.insertFirst(11);
+        // list.insertLast(99);
+        // list.insert(17, 88);
+        // System.out.println(list.find(17));
+
+        // list.display();
 
         // list. insertFirst(12);
         // list. insertFirst(18);

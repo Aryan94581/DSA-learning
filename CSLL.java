@@ -12,10 +12,22 @@ public class CSLL {
         if (head == null) {
             head = node;
             tail = node;
+            return;
         }
+        tail.next = head;
         node.next = head;
         head = node;
-        tail.next = head;
+        return;
+    }
+
+    public void display() {
+        if (head == null) {
+        }
+        Node temp = head;
+        while (temp != head) {
+            System.out.println(temp + " -> ");
+            temp = temp.next;
+        }
 
     }
 
