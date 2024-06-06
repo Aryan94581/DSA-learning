@@ -19,6 +19,18 @@ public class CSLL {
         head = node;
     }
 
+    public void insertLast(int val) {
+        Node node = new Node(val);
+        if (head == null) {
+            insert(val);
+            return;
+        } else {
+            tail.next = node;
+            node.next = head;
+            tail = node;
+        }
+    }
+
     public void display() {
         Node temp = head;
         if (head != null) {
