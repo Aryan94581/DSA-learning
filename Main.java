@@ -2,13 +2,15 @@ public class Main {
     public static void main(String[] args) {
 
         CSLL list = new CSLL();
-        list.insert(5);
-        list.insert(6);
-        list.insert(8);
-        list.insert(3);
+        list.insertFirst(5);
+        list.insertFirst(6);
+        list.insertFirst(8);
+        list.insertFirst(3);
+        list.insertLast(99);
+        list.insertAtIndex(77, 2);
+        list.searchNode(99);
         list.display();
 
-        // TODO: doubble linkedlist
         // DLL list = new DLL();
         // list.insertFirst(13);
         // list.insertFirst(15);
