@@ -10,6 +10,15 @@ public class Main {
         list.insertAtIndex(77, 2);
         list.searchNode(99);
         list.display();
+        System.out.println("First Index");
+        list.deleteFirst();
+        list.display();
+        System.out.println("Last Index!");
+        list.deleteLast();
+        list.display();
+        System.out.println("Delete by Index!");
+        list.deleteIndex(2);
+        list.display();
 
         // DLL list = new DLL();
         // list.insertFirst(13);

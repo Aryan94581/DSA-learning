@@ -61,6 +61,55 @@ public class CSLL {
         }
     }
 
+    public void deleteFirst() {
+        if (head != null) {
+            tail.next = head.next;
+            Node DeletedNode = head;
+            head = head.next;
+            size--;
+            System.out.println("Removed Element is : " + DeletedNode.value);
+        }
+        System.out.println("Your LinkedList is Empty Please Enter some Values! ");
+    }
+
+    public void deleteLast() {
+        if (head != null) {
+            Node temp = head;
+            for (int i = 0; i < size - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = head;
+            Node DeletedNode = tail;
+            tail = temp;
+            size--;
+            System.out.println("Removed Element is : " + DeletedNode.value);
+        }
+        System.out.println("Your LinkedList is Empty Please Enter some Values! ");
+    }
+
+    public void deleteIndex(int index) {
+        if (index > 0 && index < size) {
+            if (index == 0) {
+                deleteFirst();
+                return;
+            } else if (index == size) {
+                deleteLast();
+                return;
+            } else {
+                Node temp = head;
+                for (int i = 0; i < index - 1; i++) {
+                    temp = temp.next;
+                }
+                Node DeletedNode = temp.next;
+                temp.next = temp.next.next;
+                size--;
+                System.out.println("Removed Element is : " + DeletedNode.value);
+            }
+        } else {
+            System.out.println("You Entered a wrong index!");
+        }
+    }
+
     public boolean searchNode(int val) {
         if (head != null) {
             Node temp = head;
