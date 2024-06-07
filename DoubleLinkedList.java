@@ -35,6 +35,10 @@ public class DoubleLinkedList {
             tail = node;
         }
     }
+    public void insertAtIndex(int val){
+        Node node = new Node(val);
+        
+    }
     
     public boolean  display(){
         if(head == null){
