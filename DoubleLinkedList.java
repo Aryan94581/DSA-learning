@@ -1,8 +1,10 @@
 public class DoubleLinkedList {
-    public Node head;
-    public Node tail;
-    public int size;
+    private Node head;
+    private Node tail;
+    private int size;
     public DoubleLinkedList() {
+        this.head = null;
+        this.tail = null;
         this.size = size;
     }
     
@@ -29,7 +31,7 @@ public class DoubleLinkedList {
         }else{
             Node temp = head;
             System.out.println("START");
-            while(temp.next != null){
+            while(temp != null){
                 System.out.print(temp.Value + " -> ");
                 temp = temp.next;
             }
