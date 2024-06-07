@@ -24,6 +24,17 @@ public class DoubleLinkedList {
         }
         size++;
     }
+    public void insertLast(int val){
+        Node node = new Node(val);
+        if(head == null){
+            insertFirst(val);
+            return;
+        }else{
+            node.prev = tail;
+            tail.next = node;
+            tail = node;
+        }
+    }
     
     public boolean  display(){
         if(head == null){
