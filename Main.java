@@ -11,6 +11,10 @@ public class Main {
         list.insertLast(19);
         list.display();
         list.insertAtIndex(99, 2);
+
+        list.display();
+        // its time to delete
+        list.deleteFirst();
         
        
         list.display();

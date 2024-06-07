@@ -59,23 +59,26 @@ public class DoubleLinkedList {
     }
     public Boolean deleteFirst(){
         if(head != null){
+        Node deleteNode = head;
         head = head.next;
         head.prev = null; 
         size--;
+        System.out.println("Deleted value is " + deleteNode.Value);
         return true;
         }
         return false;
 }
     public Boolean deleteLast(){
         if(head != null){
+        Node deleteNode = tail;
         tail = tail.prev;
         tail.next = null; 
         size--;
+        System.out.println("Deleted value is " + deleteNode.Value);
         return true;
         }
         return false;
     }
-
     public Boolean deleteByIndex(int Index){
         if(head != null){
             if(Index == 0){
@@ -87,8 +90,10 @@ public class DoubleLinkedList {
                 for(int i = 0; i < Index -1; i++ ){
                     temp = temp.next;
                 }
+                Node deleteNode = temp.next;
                 temp.next= temp.next.next;
-                temp.next.prev = temp;    
+                temp.next.prev = temp;
+                System.out.println("Deleted value is " + deleteNode.Value);    
             }
             size--;
             return true;
