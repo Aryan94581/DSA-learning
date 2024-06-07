@@ -52,10 +52,11 @@ public class DoubleLinkedList {
                 node.next = temp.next;
                 temp.next = node;
                 node.prev = temp;
+                size++;
             }
-        }
+        }else{
         System.out.println("please fill a familiar index value");
-        size++;
+        }
     }
     public Boolean deleteFirst(){
         if(head != null){
