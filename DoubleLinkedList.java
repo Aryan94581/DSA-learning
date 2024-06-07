@@ -1,3 +1,6 @@
+
+import java.awt.print.Book;
+
 public class DoubleLinkedList {
     private Node head;
     private Node tail;
@@ -35,11 +38,33 @@ public class DoubleLinkedList {
             tail = node;
         }
     }
-    public void insertAtIndex(int val){
-        Node node = new Node(val);
-        
+    public void insertAtIndex(int val, int Index){
+        if(Index >=0){
+            if(Index == 0){
+                insertFirst(val);
+            }else if(Index >= size){
+                insertLast(val);
+            }else{
+                Node node = new Node(val);
+                Node temp = head;
+                for(int i=0;i<Index-1;i++){
+                    temp = temp.next;
+                }
+                node.next = temp.next;
+                temp.next = node;
+                node.prev = temp;
+            }
+        }
+        System.out.println("please fill a familiar index value");
+        size++;
     }
-    
+    public Boolean deleteFirst(){
+
+
+
+
+        return false
+    }
     public boolean  display(){
         if(head == null){
             return false;

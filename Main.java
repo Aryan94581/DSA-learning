@@ -9,6 +9,8 @@ public class Main {
         list.insertFirst(19);
         list.insertFirst(11);
         list.insertLast(19);
+        list.display();
+        list.insertAtIndex(99, 2);
         
        
         list.display();
