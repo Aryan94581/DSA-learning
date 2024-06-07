@@ -103,6 +103,21 @@ public class DoubleLinkedList {
         return false;
     }
 
+    public void deleteEveryThing(){
+        if(head != null){
+            Node temp = head;
+            while(temp == tail){
+                temp.next = null;
+                temp.prev = null;
+                temp = temp.next;
+                size--;
+            }
+            System.out.println("your linked List fully deleted");
+        }
+        System.out.println("Already Empty");
+    }
+
+
 
 public boolean  display(){
         if(head == null){
@@ -117,8 +132,7 @@ public boolean  display(){
             System.out.println(" END ");
             return true;
         }
-    }
-    
+    }   
     private class Node{
         int Value;
         Node next;
