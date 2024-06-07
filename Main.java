@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         
-         DoubleLinkedList list = new DoubleLinkedList ();
+        DoubleLinkedList list = new DoubleLinkedList ();
         list.insertFirst(13);
         list.insertFirst(15);
         list.insertFirst(17);

@@ -15,10 +15,10 @@ public class DoubleLinkedList {
             tail = node;
             
         }else{
-            head.next = node;
-            node.prev = head;
-            node.next = null;
-            tail = node;
+            node.next = head;
+            head.prev = node;
+            node.prev = null;
+            head = node;
         }
         size++;
     }
@@ -29,7 +29,7 @@ public class DoubleLinkedList {
         }else{
             Node temp = head;
             System.out.println("START");
-            while(temp.next == null){
+            while(temp.next != null){
                 System.out.print(temp.Value + " -> ");
                 temp = temp.next;
             }
