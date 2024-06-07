@@ -1,44 +1,36 @@
 public class Main {
     public static void main(String[] args) {
 
-        CSLL list = new CSLL();
-        list.insertFirst(5);
-        list.insertFirst(6);
-        list.insertFirst(8);
-        list.insertFirst(3);
-        list.insertLast(99);
-        list.insertAtIndex(77, 2);
-        list.searchNode(99);
+        
+         DoubleLinkedList list = new DoubleLinkedList ();
+        list.insertFirst(13);
+        list.insertFirst(15);
+        list.insertFirst(17);
+        list.insertFirst(19);
+        list.insertFirst(11);
+        
+       
         list.display();
-        System.out.println("First Index");
-        list.deleteFirst();
-        list.display();
-        System.out.println("Last Index!");
-        list.deleteLast();
-        list.display();
-        System.out.println("Delete by Index!");
-        list.deleteIndex(2);
-        list.display();
-
-        // DLL list = new DLL();
-        // list.insertFirst(13);
-        // list.insertFirst(15);
-        // list.insertFirst(17);
-        // list.insertFirst(19);
-        // list.insertFirst(11);
+       
+        
+        // CSLL list = new CSLL();
+        // list.insertFirst(5);
+        // list.insertFirst(6);
+        // list.insertFirst(8);
+        // list.insertFirst(3);
         // list.insertLast(99);
-        // list.insert(17, 88);
-        // System.out.println(list.find(17));
-
+        // list.insertAtIndex(77, 2);
+        // list.searchNode(99);
         // list.display();
-
-        // list. insertFirst(12);
-        // list. insertFirst(18);
-        // list. insertFirst(16);
-        // list.insertLast(99);
+        // System.out.println("First Index");
+        // list.deleteFirst();
         // list.display();
-        // System.out.println();
-
+        // System.out.println("Last Index!");
+        // list.deleteLast();
+        // list.display();
+        // System.out.println("Delete by Index!");
+        // list.deleteIndex(2);
+        // list.display();
         // TODO: for single linkedList
         // LL list = new LL();
         // list.insertFirst(15);

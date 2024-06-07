@@ -1,8 +1,8 @@
-public class doubleLinkedList {
+public class DoubleLinkedList {
     public Node head;
     public Node tail;
     public int size;
-    public doubleLinkedList() {
+    public DoubleLinkedList() {
         this.size = size;
     }
     
@@ -13,13 +13,14 @@ public class doubleLinkedList {
             node.next = null;
             head = node;
             tail = node;
-            size++;
+            
         }else{
             head.next = node;
             node.prev = head;
             node.next = null;
             tail = node;
         }
+        size++;
     }
     
     
@@ -41,7 +42,7 @@ public class doubleLinkedList {
             this.prev = prev;
             }
         
-        public Node(int value, doubleLinkedList.Node next, doubleLinkedList.Node prev) {
+        public Node(int value, DoubleLinkedList.Node next, DoubleLinkedList.Node prev) {
             Value = value;
                 this.next = next;
                 this.prev = prev;
