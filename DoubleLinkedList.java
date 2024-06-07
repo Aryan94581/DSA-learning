@@ -1,5 +1,4 @@
 
-import java.awt.print.Book;
 
 public class DoubleLinkedList {
     private Node head;
@@ -59,13 +58,54 @@ public class DoubleLinkedList {
         size++;
     }
     public Boolean deleteFirst(){
-
-
-
-
-        return false
+        if(head != null){
+        head = head.next;
+        head.prev = null; 
+        size--;
+        return true;
+        }
+        return false;
+}
+    public Boolean deleteLast(){
+        if(head != null){
+        tail = tail.prev;
+        tail.next = null; 
+        size--;
+        return true;
+        }
+        return false;
     }
-    public boolean  display(){
+
+    public Boolean deleteByIndex(int Index){
+        if(head != null){
+            if(Index == 0){
+                deleteFirst();
+            }else if(Index >= size){
+                deleteLast();
+            }else{
+                Node temp = head;
+                for(int i = 0; i < Index -1; i++ ){
+                    temp = temp.next;
+                }
+                temp.next= temp.next.next;
+                temp.next.prev = temp;
+                size--;
+
+            }
+
+
+
+
+
+
+            return true;
+        }
+
+        return false;
+    }
+
+
+public boolean  display(){
         if(head == null){
             return false;
         }else{
