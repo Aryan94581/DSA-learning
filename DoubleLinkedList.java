@@ -23,14 +23,20 @@ public class DoubleLinkedList {
         size++;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
+    public boolean  display(){
+        if(head == null){
+            return false;
+        }else{
+            Node temp = head;
+            System.out.println("START");
+            while(temp.next == null){
+                System.out.print(temp.Value + " -> ");
+                temp = temp.next;
+            }
+            System.out.println(" END ");
+            return true;
+        }
+    }
     
     private class Node{
         int Value;
