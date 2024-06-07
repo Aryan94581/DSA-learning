@@ -15,9 +15,13 @@ public class Main {
         list.display();
         // its time to delete
         list.deleteFirst();
-        
-       
         list.display();
+        list.deleteLast();
+        list.display();
+        list.deleteByIndex(3);
+        list.display();
+
+       
        
         
         // CSLL list = new CSLL();
