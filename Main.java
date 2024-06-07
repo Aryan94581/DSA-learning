@@ -20,6 +20,9 @@ public class Main {
         list.display();
         list.deleteByIndex(3);
         list.display();
+        
+        list.deleteEveryThing();
+        list.display();
 
        
        

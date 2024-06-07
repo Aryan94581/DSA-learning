@@ -105,16 +105,18 @@ public class DoubleLinkedList {
 
     public void deleteEveryThing(){
         if(head != null){
-            Node temp = head;
-            while(temp == tail){
-                temp.next = null;
+            while(head != null){
+                Node temp = head;
+                head = head.next;
                 temp.prev = null;
-                temp = temp.next;
+                temp.prev = null;
                 size--;
             }
+            tail = null;
             System.out.println("your linked List fully deleted");
-        }
+        }else{
         System.out.println("Already Empty");
+        }
     }
 
 
