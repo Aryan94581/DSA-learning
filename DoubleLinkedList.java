@@ -102,7 +102,6 @@ public class DoubleLinkedList {
 
         return false;
     }
-
     public void deleteEveryThing(){
         if(head != null){
             while(head != null){
@@ -118,11 +117,9 @@ public class DoubleLinkedList {
         System.out.println("Already Empty");
         }
     }
-
-
-
-public boolean  display(){
+    public boolean  display(){
         if(head == null){
+            System.out.println("LinkedList is empty");
             return false;
         }else{
             Node temp = head;
