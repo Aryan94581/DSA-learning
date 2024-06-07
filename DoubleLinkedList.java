@@ -88,16 +88,9 @@ public class DoubleLinkedList {
                     temp = temp.next;
                 }
                 temp.next= temp.next.next;
-                temp.next.prev = temp;
-                size--;
-
+                temp.next.prev = temp;    
             }
-
-
-
-
-
-
+            size--;
             return true;
         }
 
