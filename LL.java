@@ -87,26 +87,31 @@ public class LL {
 
         return val;
     }
-    public void deleteDuplicate(){
-        if(size <= 0){
-            System.out.println("there is no values in your LinkedList!");
-
-        }else if(size == 1){
-            System.out.println("your list is having only one value so it has no duplicate");
+    public void deleteDuplicate() {
+        if (size <= 0) {
+            System.out.println("There are no values in your LinkedList!");
+            return;
+        } else if (size == 1) {
+            System.out.println("Your list has only one value so it has no duplicates.");
+            return;
         }
-        Node tempNext = head.next;
-        Node temp = head;
-        for(int i =0; i <=size;i++){
-            if(tempNext.value == temp.value){
-                tempNext = tempNext.next;
-            }else{
-                tempNext = temp.next;
-                temp = temp.next;
+    
+        Node current = head;
+    
+        while (current != null && current.next != null) {
+            Node temp = current;
+            while (temp.next != null) {
+                if (current.value == temp.next.value) {
+                    temp.next = temp.next.next;
+                    size--; // Decrease size when a duplicate is removed
+                } else {
+                    temp = temp.next;
+                }
             }
+            current = current.next;
         }
-        
     }
-
+    
 
 
 
