@@ -12,11 +12,17 @@ public class Hashing {
         
         // check if the value is there or not
         if(set.contains(42)){
-            System.out.println("true");
+            System.out.println(true);
         }else{
             System.out.println(false);
         }
-        
+        if(set.contains(2)){
+            System.out.println(true);
+        }else{
+            System.out.println(false);
+        }
+        // delete Item from set
+        set.remove(48);
 
 
 
