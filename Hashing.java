@@ -7,10 +7,18 @@ public class Hashing {
         set.add(41);
         set.add(42);
         set.add(43);
-        set.add(44);
+        set.add(41);
         set.add(48);
         
+        // check if the value is there or not
+        if(set.contains(42)){
+            System.out.println("true");
+        }else{
+            System.out.println(false);
+        }
         
+
+
 
         
     }
