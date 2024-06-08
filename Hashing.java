@@ -23,9 +23,12 @@ public class Hashing {
         }
         // delete Item from set
         set.remove(48);
-
-
-
-        
+        // for Print Set
+        System.out.println(set);
+        if(set.contains(48)){
+            System.out.println(true);
+        }else{
+            System.out.println(false);
+        }  
     }
 }
