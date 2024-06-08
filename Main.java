@@ -13,12 +13,12 @@ public class Main {
         list.insertLast(3);
         list.insertLast(4);
         list.display();
-        
+        list.deleteDuplicate();
+        list.display();
         // list.insert(66, 100); give exception
 
       
-        System.err.println(list.find(13));
-        System.err.println(list.find(77));
+        
 
 
 
