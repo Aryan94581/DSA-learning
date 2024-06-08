@@ -87,6 +87,12 @@ public class LL {
 
         return val;
     }
+    public void deleteDuplicate(){
+        
+    }
+
+
+
 
     // find the node with value
     public Node find(int value) {
