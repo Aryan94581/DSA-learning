@@ -1,28 +1,50 @@
 public class Main {
     public static void main(String[] args) {
 
+        // TODO: for single linkedList
+        LL list = new LL();
         
-        DoubleLinkedList list = new DoubleLinkedList ();
-        list.insertFirst(13);
-        list.insertFirst(15);
-        list.insertFirst(17);
-        list.insertFirst(19);
-        list.insertFirst(11);
-        list.insertLast(19);
+        list.insertLast(1);
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(2);
+        list.insertLast(3);
+        list.insertLast(3);
+        list.insertLast(3);
+        list.insertLast(4);
         list.display();
-        list.insertAtIndex(99, 2);
+        
+        // list.insert(66, 100); give exception
 
-        list.display();
-        // its time to delete
-        list.deleteFirst();
-        list.display();
-        list.deleteLast();
-        list.display();
-        list.deleteByIndex(3);
-        list.display();
+      
+        System.err.println(list.find(13));
+        System.err.println(list.find(77));
+
+
+
+
+
+        // DoubleLinkedList list = new DoubleLinkedList ();
+        // list.insertFirst(13);
+        // list.insertFirst(15);
+        // list.insertFirst(17);
+        // list.insertFirst(19);
+        // list.insertFirst(11);
+        // list.insertLast(19);
+        // list.display();
+        // list.insertAtIndex(99, 2);
+
+        // list.display();
+        // // its time to delete
+        // list.deleteFirst();
+        // list.display();
+        // list.deleteLast();
+        // list.display();
+        // list.deleteByIndex(3);
+        // list.display();
         
-        list.deleteEveryThing();
-        list.display();
+        // list.deleteEveryThing();
+        // list.display();
 
        
        
@@ -45,18 +67,6 @@ public class Main {
         // System.out.println("Delete by Index!");
         // list.deleteIndex(2);
         // list.display();
-        // TODO: for single linkedList
-        // LL list = new LL();
-        // list.insertFirst(15);
-        // list.insertFirst(13);
-        // list.insertFirst(17);
-        // list.insertFirst(19);
-        // list.insertLast(16);
-        // list.insert(77, 3);
-        // // list.insert(66, 100); give exception
-
-        // list.display();
-        // System.err.println(list.find(13));
-        // System.err.println(list.find(77));
+        
     }
 }
