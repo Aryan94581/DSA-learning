@@ -88,6 +88,22 @@ public class LL {
         return val;
     }
     public void deleteDuplicate(){
+        if(size <= 0){
+            System.out.println("there is no values in your LinkedList!");
+
+        }else if(size == 1){
+            System.out.println("your list is having only one value so it has no duplicate");
+        }
+        Node tempNext = head.next;
+        Node temp = head;
+        for(int i =0; i <=size;i++){
+            if(tempNext.value == temp.value){
+                tempNext = tempNext.next;
+            }else{
+                tempNext = temp.next;
+                temp = temp.next;
+            }
+        }
         
     }
 
