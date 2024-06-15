@@ -9,7 +9,7 @@ static int binarySearch(int[] arr, int target){
         return -1;
     }
 
-    int start = 0 ,end = arr.length;
+    int start = 0 ,end = arr.length-1;
     
     while(start <= end){
         int mid = mid(start, end);
