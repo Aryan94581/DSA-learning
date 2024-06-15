@@ -1,5 +1,7 @@
 public class A_binarySearch {
 public static void main(String[] args) {
+    int[] array = {1,3,6,8,15,24,38,49,52,58,69,83};
+    System.out.println("your value is at index of" + binarySearch(array, 58));
     
 }
 static int binarySearch(int[] arr, int target){
@@ -7,16 +9,17 @@ static int binarySearch(int[] arr, int target){
         return -1;
     }
 
-    int start = 0 ,end = arr.length-1;
+    int start = 0 ,end = arr.length;
     
     while(start <= end){
         int mid = mid(start, end);
-        if(target < arr[mid]){
+        if (target == arr[mid]) {
+            return mid;
+        }else if(target < arr[mid]){
             end = mid-1;
         }else{
-            
+            start = mid+1;
         }
-        return mid;
     }
     return -1;
 }
