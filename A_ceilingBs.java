@@ -24,7 +24,9 @@ static int clingbinarySearch(int[] arr, int target){
             start = mid+1;
         }
     }
+    
     return arr[start];
+    
 }
 static int floorbinarySearch(int[] arr, int target){
     if(arr.length <= 0 ){
