@@ -2,12 +2,12 @@ public class A_ceilingBs {
     
 public static void main(String[] args) {
     int[] array = {1,3,6,8,15,24,38,49,52,58,69,83};
-    System.out.println("the Cling number is : " + clingbinarySearch(array, 56));
+    System.out.println("the Cling number is : " + ceilingbinarySearch(array, 56));
     System.out.println("the floor number is : " + floorbinarySearch(array, 56));
 
     
 }
-static int clingbinarySearch(int[] arr, int target){
+static int ceilingbinarySearch(int[] arr, int target){
     if(arr.length <= 0 ){
         return -1;
     }
