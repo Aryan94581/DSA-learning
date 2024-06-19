@@ -1,7 +1,7 @@
 public class A_bsOnInfiniteArray {
     public static void main(String[] args) {
-        int[] array ={2,3,4,6,8,15,24,38,49,52,58,69,83};
-        int target = 49;
+        int[] array ={3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170};
+        int target = 10;
         System.out.println(findingAns(array, target));
 
     }
