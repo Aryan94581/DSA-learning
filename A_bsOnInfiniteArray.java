@@ -2,7 +2,7 @@ public class A_bsOnInfiniteArray {
     public static void main(String[] args) {
         int[] array ={2, 3, 4, 6, 8, 15, 24, 38, 49, 52, 58, 69, 83};
         int target = 38;
-        findingAns(array, target);
+        System.out.println(findingAns(array, target));
 
     }
     static int findingAns(int[] arr, int target){
