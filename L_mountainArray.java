@@ -1,7 +1,7 @@
 public class L_mountainArray {
     public static void main(String[] args) {
-        int[] array = {1,3,6,8,15,24,38,49,52,58,69,83};
-        System.out.println("your value is at index of :" + mountainArrBs(array));
+        int[] array = {1,3,6,8,15,24,38,25, 23, 14, 2};
+        System.out.println("highest value :" + mountainArrBs(array));
         
     }
     
@@ -10,21 +10,21 @@ public class L_mountainArray {
             return -1;
         }
     
-        int start = 0 ,end = arr.length;
+        int start = 0 ,end = arr.length-1;
         
-        while(start <= end){
+        while(start < end){
             int mid = mid(start, end);
             
             if(arr[mid] > arr[mid+1]){
                 end = mid;
-            }else{
+            }else {
                 start = mid+1;
             }
         }
-        return -1;
+        return arr[start];
     }
         static int mid(int start, int end){
-            return (start+end)/2;
+            return start + (end - start)/2;
         }
         
     }
