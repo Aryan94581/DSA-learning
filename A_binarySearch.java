@@ -1,9 +1,10 @@
 public class A_binarySearch {
 public static void main(String[] args) {
     int[] array = {1,3,6,8,15,24,38,49,52,58,69,83};
-    System.out.println("your value is at index of :" + binarySearch(array, 83));
+    System.out.println("your value is at index of :" + binarySearch(array, 89));
     
 }
+
 static int binarySearch(int[] arr, int target){
     if(arr.length <= 0 ){
         return -1;
