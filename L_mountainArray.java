@@ -1,7 +1,7 @@
 // 852. Peak Index in a Mountain Array
 public class L_mountainArray {
     public static void main(String[] args) {
-        int[] array = {1,3,6,8,15,24,38,25, 23, 14, 2};
+        int[] array = {0, 2, 1, 0};
         System.out.println("highest value :" + mountainArrBs(array));
         
     }
