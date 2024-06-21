@@ -2,7 +2,7 @@
 public class L_searchInMountainArray { 
 public static void main(String[] args) {
     int[] array = {0, 2, 5, 7, 8, 6, 2, 0};
-        System.out.println("your value is at index of" + searchInMountainArray(array, 5));
+        System.out.println("your value is at index of :" + searchInMountainArray(array, 5));
 }
     static int searchInMountainArray(int[] arr, int target){
         if(arr.length <= 0){
