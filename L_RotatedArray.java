@@ -43,6 +43,32 @@ static int pivit(int[] arr, int start, int end){
         }
         return -1;
 }
+static int pivitElDublicate(int[] arr, int start, int end){
+    while(start <= end){
+        int mid = mid(start, end);
+        
+            if( mid < end && arr[mid] > arr[mid+1]){
+                return mid;
+            }
+            if (mid > start && arr[mid] < arr[mid-1]) {
+                return mid-1;
+            }
+            if(arr[mid] == arr[start] &&arr[mid] == arr[end]){
+                
+                if(arr[mid] > arr[mid+1]){
+                    return mid;
+                }
+                start++;
+
+                if(arr[mid] < arr[mid-1]){
+                    return mid-1;
+                }
+                end--;
+                
+            }        
+        }
+        return -1;
+}
 
 static int binarySearch(int[] arr, int target, int start , int end){
 
