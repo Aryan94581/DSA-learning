@@ -61,5 +61,4 @@ static int binarySearch(int[] arr, int target, int start , int end){
 static int mid(int start, int end){
     return start +(end - start)/2;
 }
-
 }
