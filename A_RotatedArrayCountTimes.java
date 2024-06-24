@@ -1,6 +1,16 @@
 public class A_RotatedArrayCountTimes {
     public static void main(String[] args) {
-        
+        int[] nums = {4,5,6,7,0,1,2};
+        System.out.println("your array is rotated "+ countRotation(nums) +" times!");
+    }
+    static int countRotation(int[] arr){
+        int start = 0;
+        int end = arr.length - 1;
+        int pivit = pivitElDublicate(arr, start, end);
+        if(pivit == -1){
+            System.out.println("your array is not rotated!");
+        }
+        return pivit +1;
     }
     static int pivitElDublicate(int[] arr, int start, int end){
         while(start <= end){
