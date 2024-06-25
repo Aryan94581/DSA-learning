@@ -11,7 +11,7 @@ public class A_RotatedArrayCountTimes {
             System.out.println("your array is not rotated!");
         }
         // because pivot is the point like end point of non rotated array so the index of pivot is the rotation
-        // hese we start index with 0 so we have to Add +1;  
+        // hense we start index with 0 so we have to Add +1;  
         return pivit +1;
     }
     static int pivitElDublicate(int[] arr, int start, int end){
