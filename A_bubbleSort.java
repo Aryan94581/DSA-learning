@@ -7,17 +7,18 @@ public class A_bubbleSort {
     System.out.println(Arrays.toString(arr));
     }
     static int[] bubbleSort(int[] arr){
-        int start = 1;
         int length = arr.length-1;
         while(length >= 0){
-            if(arr[start-1] > arr[start]){
-                int temp = arr[start -1];
-                arr[start-1] = arr[start];
-                arr[start] = temp;
+
+                for (int i = 1; i < length+1; i++) {
+                    
+                    if(arr[i] > arr[i-1]){
+                    int temp = arr[i];
+                    arr[i] = arr[i-1];
+                    arr[i-1] = temp;
+                }
             }
-            start++;
-            length--;
-        }
+
         return arr;
     }
 
