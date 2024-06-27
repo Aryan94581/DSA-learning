@@ -7,14 +7,15 @@ public class A_secectionSort {
     System.out.println(Arrays.toString(arr));
     }
     static void selectSort(int[] arr){
-        int length = arr.length-1;
+        int length = arr.length;
         int max = 0;
         while(length >=0){
-            for (int i : arr) {
+            for (int i= 0; i<= length; i++) {
                 if(max < i){
                     max = i;
                 }
             }
+
         }
     }
 }
