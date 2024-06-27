@@ -8,10 +8,10 @@ public class A_selectionSort {
     }
     static void selectSort(int[] arr){
 
-            for (int i=0; i < arr.length-1; i++) {
+            for (int i = 0; i < arr.length; i++) {
                 int last = arr.length - i - 1;
-                int max = maxInd(arr, i, arr.length-1);
-                swap(arr, max,last);
+                int max = maxInd(arr, 0, last);
+                swap(arr, max, last);
             }
         
         }
