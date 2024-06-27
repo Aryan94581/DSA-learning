@@ -6,23 +6,26 @@ public class A_selectionSort {
     selectSort(arr);
     System.out.println(Arrays.toString(arr));
     }
-    static void selectSort(int[] arr){
-        int length = arr.length-1;
-        int max = 0;
-        int index = 0;
-        while(length >=0){
-            for (int i= 0; i<= length; i++) {
-                if(max < arr[i]){
-                    max = arr[i];
-                    index = i;
-                }
+    static void selectSort(int[] arr) {
+    int length = arr.length - 1;
+
+    for (int start = 0; start <= length; start++) {
+        int min = arr[start];
+        int index = start;
+
+        for (int i = start + 1; i <= length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                index = i;
             }
-            if(arr[length] != max){
-                int temp = arr[length];
-                arr[length] = arr[index];
-                arr[index] = temp;
-            }
-            length--;
+        }
+
+        if (index != start) {
+            int temp = arr[start];
+            arr[start] = arr[index];
+            arr[index] = temp;
         }
     }
+}
+
 }
