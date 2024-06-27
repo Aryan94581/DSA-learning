@@ -11,7 +11,6 @@ public class A_bubbleSort {
         while(length >= 0){
 
                 for (int i = 1; i < length+1; i++) {
-                    
                     if(arr[i] < arr[i-1]){
                         int temp = arr[i];
                         arr[i] = arr[i-1];
