@@ -12,7 +12,7 @@ public class A_insertionSort {
     public static void insertionSort(int[] arr) {
         for (int i = 0; i < arr.length-2; i++) {
             int j = i + 1 ;
-            while(j > 0){
+            while(j >= 0){
             if(arr[j] < arr[i] ){
                 swap(arr, i, j);
                 j--;
