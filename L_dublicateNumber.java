@@ -16,15 +16,12 @@ public static void main(String[] args) {
         int i = 0;
         while(i < nums.length) {
             int correctIndex = nums[i] - 1;
-            if(i != correctIndex) {
-                if(nums[i] == nums[correctIndex]) {
-                    if(!list.contains(nums[i])) {
-                        list.add(nums[i]);
-                    }
-                } else {
-                    swap(nums, i, correctIndex);
-                }
+            if (nums[i] != nums[correctIndex]) {
+                swap(nums, i, correctIndex);
             } else {
+                if (i != correctIndex && !list.contains(nums[i])) {
+                    list.add(nums[i]);
+                }
                 i++;
             }
         }
