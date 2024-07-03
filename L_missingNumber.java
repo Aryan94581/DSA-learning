@@ -10,4 +10,3 @@ public class L_missingNumber {
         return sumOfIndex - sumOfArray; 
     }
 }
-// 
