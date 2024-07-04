@@ -12,17 +12,20 @@ public static void main(String[] args) {
 
     public static List<Integer> findDuplicates(int[] nums) {
         
-        List<Integer> list = new ArrayList<>();
+        
         int i = 0;
         while(i < nums.length) {
             int correctIndex = nums[i] - 1;
             if (nums[i] != nums[correctIndex]) {
                 swap(nums, i, correctIndex);
             } else {
-                if (i != correctIndex && !list.contains(nums[i])) {
-                    list.add(nums[i]);
-                }
                 i++;
+            }
+        }
+        List<Integer> list = new ArrayList<>();
+        for(int j = 0; j< nums.length; j++){
+            if(nums[j] != j+1){
+                list.add(nums[j]);
             }
         }
         return list;
