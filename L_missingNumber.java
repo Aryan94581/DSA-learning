@@ -10,3 +10,4 @@ public class L_missingNumber {
         return sumOfIndex - sumOfArray; 
     }
 }
+// checking vs code
