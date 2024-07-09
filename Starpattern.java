@@ -215,6 +215,6 @@ public class Starpattern {
             }
             System.out.println("");
         }
-
+        
     }
 }
