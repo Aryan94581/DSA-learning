@@ -4,7 +4,8 @@ public class A_recursion {
         print(1);
     }
     public static void print(int n){
-        if(n == 6){
+        if(n == 5){
+            System.out.println(n);
         return;
         }
         System.out.println(n);
